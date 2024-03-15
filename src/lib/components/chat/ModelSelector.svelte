@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import { setDefaultModels } from '$lib/apis/configs';
 	import { models, showSettings, settings, user } from '$lib/stores';
 	import { onMount, tick } from 'svelte';
@@ -6,6 +7,8 @@
 
 	export let selectedModels = [''];
 	export let disabled = false;
+
+	export const demoModelNames = ['Leger Marketing Agent', 'Leger Visual Agent', 'Leger Spreadsheet Agent'];
 
 	const saveDefaultModel = async () => {
 		const hasEmptyModel = selectedModels.filter((it) => it === '');
@@ -28,6 +31,7 @@
 			$models.map((m) => m.id).includes(model) ? model : ''
 		);
 	}
+
 </script>
 
 <div class="flex flex-col my-2">
@@ -41,16 +45,40 @@
 			>
 				<option class=" text-gray-700" value="" selected disabled>Select a model</option>
 
-				{#each $models as model}
-					{#if model.name === 'hr'}
-						<hr />
-					{:else}
-						<option value={model.id} class="text-gray-700 text-lg"
-							>{model.name +
-								`${model.size ? ` (${(model.size / 1024 ** 3).toFixed(1)}GB)` : ''}`}</option
+				{#if dev}
+					<!-- loop and create three models: Leger Marketing Agent, Leger Visual Agent, Leger Spreadsheet Agent -->
+					<!-- map each: marketing agent -> $models[0], visual agent -> $models[1], spreadsheet agent -> $models[2] -->
+					<!-- requires 3 models downloaded -->
+					{#each demoModelNames as demoModelName, demoModelIdx}
+						<option
+							value={$models[demoModelIdx].id}
+							class="text-gray-700 text-lg"
+							>{demoModelName}</option
 						>
-					{/if}
-				{/each}
+					{/each}
+					<!-- {#each $models as model}
+						{#if model.name === 'hr'}
+							<hr />
+						{:else}
+							<option value={model.id} class="text-gray-700 text-lg"
+								>{model.name +
+									`${model.size ? ` (${(model.size / 1024 ** 3).toFixed(1)}GB)` : ''}`}</option
+							>
+						{/if}
+					{/each} -->
+					
+				{:else}
+					{#each $models as model}
+						{#if model.name === 'hr'}
+							<hr />
+						{:else}
+							<option value={model.id} class="text-gray-700 text-lg"
+								>{model.name +
+									`${model.size ? ` (${(model.size / 1024 ** 3).toFixed(1)}GB)` : ''}`}</option
+							>
+						{/if}
+					{/each}
+				{/if}
 			</select>
 
 			{#if selectedModelIdx === 0}

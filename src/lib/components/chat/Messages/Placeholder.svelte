@@ -29,17 +29,17 @@
 					>
 						{#if model in modelfiles}
 							<img
-								src={modelfiles[model]?.imageUrl ?? `${WEBUI_BASE_URL}/static/favicon.png`}
+								src={modelfiles[model]?.imageUrl ?? `${WEBUI_BASE_URL}/static/leger-logo.png`}
 								alt="modelfile"
-								class=" w-14 rounded-full border-[1px] border-gray-200 dark:border-none"
+								class=" w-20 rounded-full border-[1px] border-gray-200 dark:border-none"
 								draggable="false"
 							/>
 						{:else}
 							<img
 								src={models.length === 1
-									? `${WEBUI_BASE_URL}/static/favicon.png`
-									: `${WEBUI_BASE_URL}/static/favicon.png`}
-								class=" w-14 rounded-full border-[1px] border-gray-200 dark:border-none"
+									? `${WEBUI_BASE_URL}/static/leger-logo.png`
+									: `${WEBUI_BASE_URL}/static/leger-logo.png`}
+								class=" w-24 rounded-full border-[1px] border-gray-200 dark:border-none"
 								alt="logo"
 								draggable="false"
 							/>

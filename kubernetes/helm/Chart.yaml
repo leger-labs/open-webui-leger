@@ -6,7 +6,7 @@ appVersion: "latest"
 home: https://www.openwebui.com/
 icon: https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png
 
-description: "Open WebUI: A User-Friendly Web Interface for Chat Interactions 👋"
+description: "Leger WebUI: A User-Friendly Web Interface for Chat Interactions 👋"
 keywords:
 - llm
 - chat

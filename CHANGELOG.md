@@ -112,10 +112,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **🔗 Built-in LiteLLM Proxy**: Now includes LiteLLM proxy within Open WebUI for enhanced functionality.
+- **🔗 Built-in LiteLLM Proxy**: Now includes LiteLLM proxy within Leger WebUI for enhanced functionality.
 
   - Easily integrate existing LiteLLM configurations using `-v /path/to/config.yaml:/app/backend/data/litellm/config.yaml` flag.
-  - When utilizing Docker container to run Open WebUI, ensure connections to localhost use `host.docker.internal`.
+  - When utilizing Docker container to run Leger WebUI, ensure connections to localhost use `host.docker.internal`.
 
 - **🖼️ Image Generation Enhancements**: Introducing Advanced Settings with Image Preview Feature.
   - Customize image generation by setting the number of steps; defaults to A1111 value.
@@ -126,8 +126,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Ollama is no longer required to run Open WebUI.
-- Access our comprehensive documentation at [Open WebUI Documentation](https://docs.openwebui.com/).
+- Ollama is no longer required to run Leger WebUI.
+- Access our comprehensive documentation at [Leger WebUI Documentation](https://docs.openwebui.com/).
 
 ## [0.1.102] - 2024-02-22
 

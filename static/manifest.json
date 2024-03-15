@@ -1,6 +1,6 @@
 {
-	"name": "Open WebUI",
-	"short_name": "Open WebUI",
+	"name": "Leger WebUI",
+	"short_name": "Leger WebUI",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#343541",

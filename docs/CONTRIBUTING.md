@@ -1,19 +1,19 @@
-# Contributing to Open WebUI
+# Contributing to Leger WebUI
 
 🚀 **Welcome, Contributors!** 🚀
 
-Your interest in contributing to Open WebUI is greatly appreciated. This document is here to guide you through the process, ensuring your contributions enhance the project effectively. Let's make Open WebUI even better, together!
+Your interest in contributing to Leger WebUI is greatly appreciated. This document is here to guide you through the process, ensuring your contributions enhance the project effectively. Let's make Leger WebUI even better, together!
 
 ## 📌 Key Points
 
-### 🦙 Ollama vs. Open WebUI
+### 🦙 Ollama vs. Leger WebUI
 
-It's crucial to distinguish between Ollama and Open WebUI:
+It's crucial to distinguish between Ollama and Leger WebUI:
 
-- **Open WebUI** focuses on providing an intuitive and responsive web interface for chat interactions.
+- **Leger WebUI** focuses on providing an intuitive and responsive web interface for chat interactions.
 - **Ollama** is the underlying technology that powers these interactions.
 
-If your issue or contribution pertains directly to the core Ollama technology, please direct it to the appropriate [Ollama project repository](https://ollama.com/). Open WebUI's repository is dedicated to the web interface aspect only.
+If your issue or contribution pertains directly to the core Ollama technology, please direct it to the appropriate [Ollama project repository](https://ollama.com/). Leger WebUI's repository is dedicated to the web interface aspect only.
 
 ### 🚨 Reporting Issues
 
@@ -27,11 +27,11 @@ Noticed something off? Have an idea? Check our [Issues tab](https://github.com/o
 
 ### 🧭 Scope of Support
 
-We've noticed an uptick in issues not directly related to Open WebUI but rather to the environment it's run in, especially Docker setups. While we strive to support Docker deployment, understanding Docker fundamentals is crucial for a smooth experience.
+We've noticed an uptick in issues not directly related to Leger WebUI but rather to the environment it's run in, especially Docker setups. While we strive to support Docker deployment, understanding Docker fundamentals is crucial for a smooth experience.
 
-- **Docker Deployment Support**: Open WebUI supports Docker deployment. Familiarity with Docker is assumed. For Docker basics, please refer to the [official Docker documentation](https://docs.docker.com/get-started/overview/).
+- **Docker Deployment Support**: Leger WebUI supports Docker deployment. Familiarity with Docker is assumed. For Docker basics, please refer to the [official Docker documentation](https://docs.docker.com/get-started/overview/).
 
-- **Advanced Configurations**: Setting up reverse proxies for HTTPS and managing Docker deployments requires foundational knowledge. There are numerous online resources available to learn these skills. Ensuring you have this knowledge will greatly enhance your experience with Open WebUI and similar projects.
+- **Advanced Configurations**: Setting up reverse proxies for HTTPS and managing Docker deployments requires foundational knowledge. There are numerous online resources available to learn these skills. Ensuring you have this knowledge will greatly enhance your experience with Leger WebUI and similar projects.
 
 ## 💡 Contributing
 
@@ -48,7 +48,7 @@ We welcome pull requests. Before submitting one, please:
 
 ### 📚 Documentation & Tutorials
 
-Help us make Open WebUI more accessible by improving documentation, writing tutorials, or creating guides on setting up and optimizing the web UI.
+Help us make Leger WebUI more accessible by improving documentation, writing tutorials, or creating guides on setting up and optimizing the web UI.
 
 ### 🤔 Questions & Feedback
 
@@ -56,6 +56,6 @@ Got questions or feedback? Join our [Discord community](https://discord.gg/5rJgQ
 
 ## 🙏 Thank You!
 
-Your contributions, big or small, make a significant impact on Open WebUI. We're excited to see what you bring to the project!
+Your contributions, big or small, make a significant impact on Leger WebUI. We're excited to see what you bring to the project!
 
 Together, let's create an even more powerful tool for the community. 🌟

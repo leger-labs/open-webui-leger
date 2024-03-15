@@ -23,7 +23,7 @@ try:
 except ImportError:
     print("dotenv not installed, skipping...")
 
-WEBUI_NAME = "Open WebUI"
+WEBUI_NAME = "Leger WebUI"
 shutil.copyfile("../build/favicon.png", "./static/favicon.png")
 
 ####################################
@@ -269,7 +269,7 @@ DEFAULT_PROMPT_SUGGESTIONS = (
     and type(CONFIG_DATA["ui"]["prompt_suggestions"]) is list
     else [
         {
-            "title": ["Help me study", "vocabulary for a college entrance exam"],
+            "title": ["Give me slogan ideas", "for an online branding campaign"],
             "content": "Help me study vocabulary: write a sentence for me to fill in the blank, and I'll try to pick the correct option.",
         },
         {
