@@ -81,7 +81,7 @@ app.state.RAG_TEMPLATE = RAG_TEMPLATE
 app.state.RAG_EMBEDDING_MODEL = RAG_EMBEDDING_MODEL
 app.state.TOP_K = 4
 
-# was causing seg fault 11
+# was causing seg fault 11 -- commented out during dev
 # app.state.sentence_transformer_ef = (
 #     embedding_functions.SentenceTransformerEmbeddingFunction(
 #         model_name=app.state.RAG_EMBEDDING_MODEL,

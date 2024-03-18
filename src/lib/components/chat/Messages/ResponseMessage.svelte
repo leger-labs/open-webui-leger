@@ -305,16 +305,20 @@
 
 		<div class="w-full overflow-hidden">
 			<Name>
-				{#if message.model in modelfiles}
-					{modelfiles[message.model]?.title}
+				{#if dev}
+					
 				{:else}
-					{message.model ? ` ${message.model}` : ''}
-				{/if}
+					{#if message.model in modelfiles}
+						{modelfiles[message.model]?.title}
+					{:else}
+						{message.model ? ` ${message.model}` : ''}
+					{/if}
 
-				{#if message.timestamp}
-					<span class=" invisible group-hover:visible text-gray-400 text-xs font-medium">
-						{dayjs(message.timestamp * 1000).format('DD/MM/YYYY HH:mm')}
-					</span>
+					{#if message.timestamp}
+						<span class=" invisible group-hover:visible text-gray-400 text-xs font-medium">
+							{dayjs(message.timestamp * 1000).format('DD/MM/YYYY HH:mm')}
+						</span>
+					{/if}
 				{/if}
 			</Name>
 

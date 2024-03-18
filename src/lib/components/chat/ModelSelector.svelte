@@ -45,8 +45,7 @@
 			>
 				<option class=" text-gray-700" value="" selected disabled>Select a model</option>
 
-				{#if dev}
-					<!-- loop and create three models: Leger Marketing Agent, Leger Visual Agent, Leger Spreadsheet Agent -->
+				<!-- loop and create three models: Leger Marketing Agent, Leger Visual Agent, Leger Spreadsheet Agent -->
 					<!-- map each: marketing agent -> $models[0], visual agent -> $models[1], spreadsheet agent -> $models[2] -->
 					<!-- requires 3 models downloaded -->
 					{#each demoModelNames as demoModelName, demoModelIdx}
@@ -56,6 +55,9 @@
 							>{demoModelName}</option
 						>
 					{/each}
+
+				<!-- {#if dev}
+					
 					<!-- {#each $models as model}
 						{#if model.name === 'hr'}
 							<hr />
@@ -67,7 +69,7 @@
 						{/if}
 					{/each} -->
 					
-				{:else}
+				<!-- {:else}
 					{#each $models as model}
 						{#if model.name === 'hr'}
 							<hr />
@@ -78,7 +80,7 @@
 							>
 						{/if}
 					{/each}
-				{/if}
+				{/if} -->
 			</select>
 
 			{#if selectedModelIdx === 0}

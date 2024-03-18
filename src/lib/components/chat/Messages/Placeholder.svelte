@@ -39,7 +39,7 @@
 								src={models.length === 1
 									? `${WEBUI_BASE_URL}/static/leger-logo.png`
 									: `${WEBUI_BASE_URL}/static/leger-logo.png`}
-								class=" w-24 rounded-full border-[1px] border-gray-200 dark:border-none"
+								class=" w-52 rounded-full border-gray-200 dark:border-none"
 								alt="logo"
 								draggable="false"
 							/>
