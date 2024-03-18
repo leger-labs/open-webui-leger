@@ -16,8 +16,8 @@ services:
       args:
         OLLAMA_BASE_URL: '/ollama'
       dockerfile: Dockerfile
-    image: ghcr.io/open-webui/open-webui:main
-    container_name: open-webui
+    image: ghcr.io/open-webui/open-webui:main # need to modify
+    container_name: open-webui                # need to modify
     volumes:
       - open-webui:/app/backend/data
     depends_on:

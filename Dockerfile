@@ -74,9 +74,9 @@ RUN mkdir -p /root/.cache/chroma/onnx_models/all-MiniLM-L6-v2
 COPY --from=build /app/onnx /root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx
 
 # copy built frontend files
-COPY --from=build /app/build /app/build
-COPY --from=build /app/CHANGELOG.md /app/CHANGELOG.md
-COPY --from=build /app/package.json /app/package.json
+COPY ./build /app/build
+COPY ./CHANGELOG.md /app/CHANGELOG.md
+COPY ./package.json /app/package.json
 
 # copy backend files
 COPY ./backend .
