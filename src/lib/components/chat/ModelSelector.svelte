@@ -45,42 +45,31 @@
 			>
 				<option class=" text-gray-700" value="" selected disabled>Select a model</option>
 
-				<!-- loop and create three models: Leger Marketing Agent, Leger Visual Agent, Leger Spreadsheet Agent -->
+				<!-- {#if dev}
+					<!-- loop and create three models: Leger Marketing Agent, Leger Visual Agent, Leger Spreadsheet Agent -->
 					<!-- map each: marketing agent -> $models[0], visual agent -> $models[1], spreadsheet agent -> $models[2] -->
 					<!-- requires 3 models downloaded -->
-					{#each demoModelNames as demoModelName, demoModelIdx}
+					<!-- {#each demoModelNames as demoModelName, demoModelIdx}
 						<option
 							value={$models[demoModelIdx].id}
 							class="text-gray-700 text-lg"
 							>{demoModelName}</option
 						>
-					{/each}
-
-				<!-- {#if dev}
-					
-					<!-- {#each $models as model}
-						{#if model.name === 'hr'}
-							<hr />
-						{:else}
-							<option value={model.id} class="text-gray-700 text-lg"
-								>{model.name +
-									`${model.size ? ` (${(model.size / 1024 ** 3).toFixed(1)}GB)` : ''}`}</option
-							>
-						{/if}
 					{/each} -->
 					
-				<!-- {:else}
+				<!-- {:else} --> 
 					{#each $models as model}
 						{#if model.name === 'hr'}
 							<hr />
 						{:else}
-							<option value={model.id} class="text-gray-700 text-lg"
+							<!-- <option value={model.id} class="text-gray-700 text-lg"
 								>{model.name +
 									`${model.size ? ` (${(model.size / 1024 ** 3).toFixed(1)}GB)` : ''}`}</option
-							>
+							> -->
+							<option value={model.id} class="text-gray-700 text-lg">{model.name}</option>
 						{/if}
 					{/each}
-				{/if} -->
+				<!-- {/if} -->
 			</select>
 
 			{#if selectedModelIdx === 0}

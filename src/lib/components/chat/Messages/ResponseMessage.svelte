@@ -305,10 +305,7 @@
 
 		<div class="w-full overflow-hidden">
 			<Name>
-				{#if dev}
-					
-				{:else}
-					{#if message.model in modelfiles}
+				{#if message.model in modelfiles}
 						{modelfiles[message.model]?.title}
 					{:else}
 						{message.model ? ` ${message.model}` : ''}
@@ -319,7 +316,6 @@
 							{dayjs(message.timestamp * 1000).format('DD/MM/YYYY HH:mm')}
 						</span>
 					{/if}
-				{/if}
 			</Name>
 
 			{#if message.content === ''}
