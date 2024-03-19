@@ -73,8 +73,6 @@ RUN python -c "import os; from faster_whisper import WhisperModel; WhisperModel(
 RUN mkdir -p /root/.cache/chroma/onnx_models/all-MiniLM-L6-v2
 COPY --from=build /app/onnx /root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx
 
-WORKDIR /app
-
 # copy built frontend files
 COPY ./build /app/build
 COPY ./CHANGELOG.md /app/CHANGELOG.md

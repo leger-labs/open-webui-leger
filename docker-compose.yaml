@@ -10,16 +10,11 @@ services:
     restart: unless-stopped
     image: ollama/ollama:latest
 
-  open-webui:
-    build:
-      context: .
-      args:
-        OLLAMA_BASE_URL: '/ollama'
-      dockerfile: Dockerfile
-    image: ghcr.io/open-webui/open-webui:main # need to modify
-    container_name: open-webui                # need to modify
+  leger-webui: 
+    image: leger-webui:demo
+    container_name: leger-webui
     volumes:
-      - open-webui:/app/backend/data
+      - leger-webui:/app/backend/data 
     depends_on:
       - ollama
     ports:
@@ -33,4 +28,4 @@ services:
 
 volumes:
   ollama: {}
-  open-webui: {}
+  leger-webui: {}
