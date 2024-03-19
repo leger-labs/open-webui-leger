@@ -11,7 +11,7 @@ services:
     image: ollama/ollama:latest
 
   leger-webui: 
-    image: leger-webui:demo
+    image: ghcr.io/leger-labs/leger-webui/leger-webui:demo
     container_name: leger-webui
     volumes:
       - leger-webui:/app/backend/data 
