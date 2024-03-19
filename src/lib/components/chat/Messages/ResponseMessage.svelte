@@ -53,6 +53,14 @@
 
 	$: tokens = marked.lexer(message.content);
 
+	// replace '-' with ' ' and capitalize first letter of each word
+	const parseModelName = (name: string) => {
+		return name
+			.split('-')
+			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+			.join(' ');
+	};
+
 	const renderer = new marked.Renderer();
 
 	// For code blocks with simple backticks
@@ -306,7 +314,7 @@
 		<div class="w-full overflow-hidden">
 			<Name>
 				{#if message.model in modelfiles}
-						{modelfiles[message.model]?.title}
+						{parseModelName(modelfiles[message.model]?.title)}
 					{:else}
 						{message.model ? ` ${message.model}` : ''}
 					{/if}

@@ -15,6 +15,14 @@
 	$: if (models.length > 0) {
 		selectedModelIdx = models.length - 1;
 	}
+	
+	const parseModelName = (name: string) => {
+		name = name.replace(/:latest$/, '');
+		return name
+			.split('-')
+			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+			.join(' ');
+	};
 </script>
 
 {#if models.length > 0}
@@ -31,7 +39,7 @@
 							<img
 								src={modelfiles[model]?.imageUrl ?? `${WEBUI_BASE_URL}/static/leger-logo.png`}
 								alt="modelfile"
-								class=" w-20 rounded-full border-[1px] border-gray-200 dark:border-none"
+								class=" w-52 rounded-full border-gray-200 dark:border-none"
 								draggable="false"
 							/>
 						{:else}
@@ -51,7 +59,7 @@
 		<div class=" mt-2 mb-5 text-2xl text-gray-800 dark:text-gray-100 font-semibold">
 			{#if modelfile}
 				<span class=" capitalize">
-					{modelfile.title}
+					{parseModelName(modelfile.title)}
 				</span>
 				<div class="mt-0.5 text-base font-normal text-gray-600 dark:text-gray-400">
 					{modelfile.desc}
