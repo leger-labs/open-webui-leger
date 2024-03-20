@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 # /build
+.github/workflows/build-release.yml
 /.svelte-kit
 /package
 .env
