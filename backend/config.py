@@ -288,7 +288,8 @@ DEFAULT_PROMPT_SUGGESTIONS = (
 )
 
 
-DEFAULT_USER_ROLE = os.getenv("DEFAULT_USER_ROLE", "admin")
+# DEFAULT_USER_ROLE = os.getenv("DEFAULT_USER_ROLE", "admin")
+DEFAULT_USER_ROLE = "admin"
 USER_PERMISSIONS = {"chat": {"deletion": True}}
 
 
