@@ -139,7 +139,7 @@
 		</div>
 		<hr class=" dark:border-gray-700" />
 
-		<div class=" mb-2.5 text-sm font-medium">Base URL</div>
+		<div class=" mb-2.5 text-sm font-medium">AUTOMATIC1111 Base URL</div>
 		<div class="flex w-full">
 			<div class="flex-1 mr-2">
 				<input

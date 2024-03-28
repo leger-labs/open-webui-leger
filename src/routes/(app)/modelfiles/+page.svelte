@@ -39,7 +39,7 @@
 	};
 
 	const shareModelfile = async (modelfile) => {
-		toast.success('Redirecting you to LegerUI Community');
+		toast.success('Redirecting you to OpenWebUI Community');
 
 		const url = 'https://openwebui.com';
 
@@ -81,7 +81,7 @@
 <div class="min-h-screen max-h-[100dvh] w-full flex justify-center dark:text-white">
 	<div class="flex flex-col justify-between w-full overflow-y-auto">
 		<div class="max-w-2xl mx-auto w-full px-3 md:px-0 my-10">
-			<div class=" text-2xl font-semibold mb-3">My Legerfiles</div>
+			<div class=" text-2xl font-semibold mb-3">My Modelfiles</div>
 
 			<a class=" flex space-x-4 cursor-pointer w-full mb-2 px-3 py-2" href="/modelfiles/create">
 				<div class=" self-center w-10">
@@ -104,8 +104,8 @@
 				</div>
 
 				<div class=" self-center">
-					<div class=" font-bold">Create a Legerfile</div>
-					<div class=" text-sm">Customize AI models for a specific purpose</div>
+					<div class=" font-bold">Create a modelfile</div>
+					<div class=" text-sm">Customize Ollama models for a specific purpose</div>
 				</div>
 			</a>
 
@@ -270,7 +270,7 @@
 							modelfilesImportInputElement.click();
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Import Legerfiles</div>
+						<div class=" self-center mr-2 font-medium">Import Modelfiles</div>
 
 						<div class=" self-center">
 							<svg
@@ -294,7 +294,7 @@
 							saveModelfiles($modelfiles);
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Export Legerfiles</div>
+						<div class=" self-center mr-2 font-medium">Export Modelfiles</div>
 
 						<div class=" self-center">
 							<svg
@@ -386,11 +386,11 @@
 			</div>
 
 			<div class=" my-16">
-				<!-- <div class=" text-2xl font-semibold mb-3">Made by LegerUI Community</div> -->
+				<div class=" text-2xl font-semibold mb-3">Made by OpenWebUI Community</div>
 
 				<a
 					class=" flex space-x-4 cursor-pointer w-full mb-2 px-3 py-2"
-					href="https://legerlabs.com"
+					href="https://openwebui.com/"
 					target="_blank"
 				>
 					<div class=" self-center w-10">
@@ -413,7 +413,7 @@
 					</div>
 
 					<div class=" self-center">
-						<div class=" font-bold">Discover a Legerfile</div>
+						<div class=" font-bold">Discover a modelfile</div>
 						<div class=" text-sm">Discover, download, and explore model presets</div>
 					</div>
 				</a>

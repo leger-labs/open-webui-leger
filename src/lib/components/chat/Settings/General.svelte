@@ -86,7 +86,7 @@
 <div class="flex flex-col h-full justify-between text-sm">
 	<div class="  pr-1.5 overflow-y-scroll max-h-[20.5rem]">
 		<div class="">
-			<div class=" mb-1 text-sm font-medium">LegerUI Settings</div>
+			<div class=" mb-1 text-sm font-medium">WebUI Settings</div>
 
 			<div class=" py-0.5 flex w-full justify-between">
 				<div class=" self-center text-xs font-medium">Theme</div>

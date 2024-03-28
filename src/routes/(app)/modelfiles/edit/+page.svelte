@@ -248,7 +248,7 @@
 				}}
 			/>
 
-			<div class=" text-2xl font-semibold mb-6">My Legerfiles</div>
+			<div class=" text-2xl font-semibold mb-6">My Modelfiles</div>
 
 			<button
 				class="flex space-x-1"

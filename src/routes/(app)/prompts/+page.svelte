@@ -13,7 +13,7 @@
 	let query = '';
 	let promptsImportInputElement: HTMLInputElement;
 	const sharePrompt = async (prompt) => {
-		toast.success('Redirecting you to LegerUI Community');
+		toast.success('Redirecting you to OpenWebUI Community');
 
 		const url = 'https://openwebui.com';
 
@@ -38,7 +38,7 @@
 
 <svelte:head>
 	<title>
-		{`Integrations | ${$WEBUI_NAME}`}
+		{`Prompts | ${$WEBUI_NAME}`}
 	</title>
 </svelte:head>
 
@@ -46,7 +46,7 @@
 	<div class="flex flex-col justify-between w-full overflow-y-auto">
 		<div class="max-w-2xl mx-auto w-full px-3 md:px-0 my-10">
 			<div class="mb-6 flex justify-between items-center">
-				<div class=" text-2xl font-semibold self-center">My Integrations</div>
+				<div class=" text-2xl font-semibold self-center">My Prompts</div>
 			</div>
 
 			<div class=" flex w-full space-x-2">
@@ -68,7 +68,7 @@
 					<input
 						class=" w-full text-sm pr-4 py-1 rounded-r-xl outline-none bg-transparent"
 						bind:value={query}
-						placeholder="Search Integration"
+						placeholder="Search Prompt"
 					/>
 				</div>
 
@@ -246,7 +246,7 @@
 							promptsImportInputElement.click();
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Import Integrations</div>
+						<div class=" self-center mr-2 font-medium">Import Prompts</div>
 
 						<div class=" self-center">
 							<svg
@@ -274,7 +274,7 @@
 							saveAs(blob, `prompts-export-${Date.now()}.json`);
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Export Integrations</div>
+						<div class=" self-center mr-2 font-medium">Export Prompts</div>
 
 						<div class=" self-center">
 							<svg
@@ -303,11 +303,11 @@
 			</div>
 
 			<div class=" my-16">
-				<!-- <div class=" text-2xl font-semibold mb-3">Made by LegerUI Community</div> -->
+				<div class=" text-2xl font-semibold mb-3">Made by OpenWebUI Community</div>
 
 				<a
 					class=" flex space-x-4 cursor-pointer w-full mb-3 px-3 py-2"
-					href="https://legerlabs.com/?type=prompts"
+					href="https://openwebui.com/?type=prompts"
 					target="_blank"
 				>
 					<div class=" self-center w-10">
@@ -330,8 +330,8 @@
 					</div>
 
 					<div class=" self-center">
-						<div class=" font-bold">Discover an integration</div>
-						<div class=" text-sm">Discover, download, and explore custom integrations</div>
+						<div class=" font-bold">Discover a prompt</div>
+						<div class=" text-sm">Discover, download, and explore custom prompts</div>
 					</div>
 				</a>
 			</div>

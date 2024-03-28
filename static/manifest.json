@@ -1,6 +1,6 @@
 {
-	"name": "LegerUI",
-	"short_name": "LegerUI",
+	"name": "Leger WebUI",
+	"short_name": "Leger WebUI",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#343541",

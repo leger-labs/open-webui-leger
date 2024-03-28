@@ -349,7 +349,7 @@ SYSTEM """${system}"""`.replace(/^\s*\n/gm, '');
 				}}
 			/>
 
-			<div class=" text-2xl font-semibold mb-6">My Legerfiles</div>
+			<div class=" text-2xl font-semibold mb-6">My Modelfiles</div>
 
 			<button
 				class="flex space-x-1"
@@ -423,7 +423,7 @@ SYSTEM """${system}"""`.replace(/^\s*\n/gm, '');
 						<div>
 							<input
 								class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
-								placeholder="Name your Legerfile"
+								placeholder="Name your modelfile"
 								bind:value={title}
 								required
 							/>
@@ -450,7 +450,7 @@ SYSTEM """${system}"""`.replace(/^\s*\n/gm, '');
 					<div>
 						<input
 							class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
-							placeholder="Add a short description about what this Legerfile does"
+							placeholder="Add a short description about what this modelfile does"
 							bind:value={desc}
 							required
 						/>
@@ -459,7 +459,7 @@ SYSTEM """${system}"""`.replace(/^\s*\n/gm, '');
 
 				<div class="my-2">
 					<div class="flex w-full justify-between">
-						<div class=" self-center text-sm font-semibold">Legerfile</div>
+						<div class=" self-center text-sm font-semibold">Modelfile</div>
 
 						<button
 							class="p-1 px-3 text-xs flex rounded transition"
@@ -503,10 +503,10 @@ SYSTEM """${system}"""`.replace(/^\s*\n/gm, '');
 								or
 								<a
 									class=" text-gray-500 dark:text-gray-300 font-medium"
-									href="https://legerlabs.com"
+									href="https://openwebui.com"
 									target="_blank"
 								>
-									Click here to check other Legerfiles.
+									Click here to check other modelfiles.
 								</a>
 							</div>
 						</div>

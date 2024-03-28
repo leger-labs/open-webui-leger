@@ -94,7 +94,7 @@
 >
 	<div class=" space-y-3 pr-1.5 overflow-y-scroll h-80">
 		<div>
-			<div class=" mb-1 text-sm font-medium">LegerUI Add-ons</div>
+			<div class=" mb-1 text-sm font-medium">WebUI Add-ons</div>
 
 			<div>
 				<div class=" py-0.5 flex w-full justify-between">

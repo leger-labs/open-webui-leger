@@ -23,7 +23,7 @@ try:
 except ImportError:
     print("dotenv not installed, skipping...")
 
-WEBUI_NAME = "LegerUI"
+WEBUI_NAME = "Leger WebUI"
 shutil.copyfile("../build/favicon.png", "./static/favicon.png")
 
 ####################################
