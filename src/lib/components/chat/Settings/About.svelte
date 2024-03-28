@@ -49,9 +49,10 @@
 			<div class="flex w-full justify-between items-center">
 				<div class="flex flex-col text-xs text-gray-700 dark:text-gray-200">
 					<div>
-						v{WEBUI_VERSION}
+						v1.0.0
+						<!-- v{WEBUI_VERSION} -->
 
-						<a
+						<!-- <a
 							href="https://github.com/open-webui/open-webui/releases/tag/v{version.latest}"
 							target="_blank"
 						>
@@ -60,7 +61,7 @@
 								: updateAvailable
 								? `(v${version.latest} available!)`
 								: '(latest)'}
-						</a>
+						</a> -->
 					</div>
 
 					<button
@@ -84,7 +85,7 @@
 			</div>
 		</div>
 
-		{#if ollamaVersion}
+		<!-- {#if ollamaVersion}
 			<hr class=" dark:border-gray-700" />
 
 			<div>
@@ -95,11 +96,11 @@
 					</div>
 				</div>
 			</div>
-		{/if}
+		{/if} -->
 
 		<hr class=" dark:border-gray-700" />
 
-		<div class="flex space-x-1">
+		<!-- <div class="flex space-x-1">
 			<a href="https://discord.gg/5rJgQTnV4s" target="_blank">
 				<img
 					alt="Discord"
@@ -128,6 +129,6 @@
 				href="https://github.com/tjbck"
 				target="_blank">Timothy J. Baek</a
 			>
-		</div>
+		</div> -->
 	</div>
 </div>

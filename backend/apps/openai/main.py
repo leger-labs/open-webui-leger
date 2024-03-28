@@ -125,7 +125,7 @@ async def speech(request: Request, user=Depends(get_verified_user)):
 
         except Exception as e:
             print(e)
-            error_detail = "Leger WebUI: Server Connection Error"
+            error_detail = "LegerUI: Server Connection Error"
             if r is not None:
                 try:
                     res = r.json()
@@ -207,7 +207,7 @@ async def get_models(url_idx: Optional[int] = None):
             return response_data
         except Exception as e:
             print(e)
-            error_detail = "Leger WebUI: Server Connection Error"
+            error_detail = "LegerUI: Server Connection Error"
             if r is not None:
                 try:
                     res = r.json()
@@ -289,7 +289,7 @@ async def proxy(path: str, request: Request, user=Depends(get_verified_user)):
             return response_data
     except Exception as e:
         print(e)
-        error_detail = "Leger WebUI: Server Connection Error"
+        error_detail = "LegerUI: Server Connection Error"
         if r is not None:
             try:
                 res = r.json()

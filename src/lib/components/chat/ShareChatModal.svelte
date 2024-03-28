@@ -17,7 +17,7 @@
 				show = false;
 			}}
 		>
-			Share to OpenWebUI Community
+			Share to LegerUI Community
 		</button>
 
 		<div class="flex justify-center space-x-1 mt-1.5">
