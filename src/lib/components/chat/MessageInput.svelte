@@ -919,7 +919,7 @@
 				</form>
 
 				<div class="mt-1.5 text-xs text-gray-500 text-center">
-					LLMs can make mistakes. Verify important information.
+					Unlock LLMs for your Enterprise.
 				</div>
 			</div>
 		</div>

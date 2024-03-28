@@ -389,7 +389,7 @@
 	<div class=" space-y-3 pr-1.5 overflow-y-scroll h-[23rem]">
 		{#if ollamaVersion}
 			<div class="space-y-2 pr-1.5">
-				<div class="text-sm font-medium">Manage Ollama Models</div>
+				<div class="text-sm font-medium">Manage AI Models</div>
 
 				{#if OLLAMA_URLS.length > 1}
 					<div class="flex-1 pb-1">
@@ -407,7 +407,7 @@
 
 				<div class="space-y-2">
 					<div>
-						<div class=" mb-2 text-sm font-medium">Pull a model from Ollama.com</div>
+						<div class=" mb-2 text-sm font-medium">Pull a model</div>
 						<div class="flex w-full">
 							<div class="flex-1 mr-2">
 								<input
