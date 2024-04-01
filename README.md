@@ -1,7 +1,6 @@
 # Leger WebUI
 
-User-friendly WebUI for LLMs, supported LLM runners include Ollama and OpenAI-compatible APIs. Based on [Open WebUI](https://docs.openwebui.com/).
-
+User-friendly WebUI for LLMs, supported LLM runners include Ollama and OpenAI-compatible APIs.
 ## Features ⭐
 
 - 🖥️ **Intuitive Interface**: No configuration needed, ready out of the box.
