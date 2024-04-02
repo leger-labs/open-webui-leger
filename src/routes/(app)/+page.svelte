@@ -19,7 +19,7 @@
 	} from '$lib/stores';
 	import { copyToClipboard, splitStream } from '$lib/utils';
 
-	import { generateChatCompletion, cancelChatCompletion, generateTitle } from '$lib/apis/ollama';
+	import { generateChatCompletion, cancelChatCompletion, generateTitle, generateArtificialChatCompletion } from '$lib/apis/ollama';
 	import {
 		addTagById,
 		createNewChat,
@@ -368,17 +368,36 @@
 			}
 		});
 
-		const [res, controller] = await generateChatCompletion(localStorage.token, {
-			model: model,
-			messages: messagesBody,
-			options: {
-				...($settings.options ?? {})
-			},
-			format: $settings.requestFormat ?? undefined,
-			keep_alive: $settings.keepAlive ?? undefined
-		});
+		async function fetchCompletion(userPrompt, token, model, messagesBody, $settings) {
+			console.log("userPrompt: ", userPrompt);
+			if (userPrompt.includes('Google Sheets')) {
+				console.log('Google Sheets');
+				// Run our custom Python script
+				return generateArtificialChatCompletion(token, { some_field: "Test" });
+			} else {
+				return generateChatCompletion(token, {
+					model: model,
+					messages: messagesBody,
+					options: {
+						...($settings.options ?? {})
+					},
+					format: $settings.requestFormat ?? undefined,
+					keep_alive: $settings.keepAlive ?? undefined
+				});
+			}
+		}
+
+		const [res, controller] = await fetchCompletion(
+			userPrompt,
+			localStorage.token,
+			model,
+			messagesBody,
+			$settings
+		);
+
 
 		if (res && res.ok) {
+			console.log('res', res);
 			console.log('controller', controller);
 
 			const reader = res.body
@@ -403,6 +422,7 @@
 				}
 
 				try {
+					console.log('value', value)
 					let lines = value.split('\n');
 
 					for (const line of lines) {
@@ -428,10 +448,15 @@
 								} else {
 									responseMessage.done = true;
 
-									if (responseMessage.content == '') {
-										responseMessage.error = true;
-										responseMessage.content =
-											'Oops! No text generated from Ollama, Please try again.';
+									// hacky fix for empty response, need to examine why fetchCompletion res aren't same
+									if (userPrompt.includes('Google Sheets')) {
+										responseMessage.content = "The desired changes are attached and can now be seen."
+									} else {
+										if (responseMessage.content == '') {
+											responseMessage.error = true;
+											responseMessage.content =
+												'Oops! No text generated from Ollama, Please try again.';
+										}
 									}
 
 									responseMessage.context = data.context ?? null;

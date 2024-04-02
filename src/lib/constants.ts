@@ -13,6 +13,10 @@ export const AUDIO_API_BASE_URL = `${WEBUI_BASE_URL}/audio/api/v1`;
 export const IMAGES_API_BASE_URL = `${WEBUI_BASE_URL}/images/api/v1`;
 export const RAG_API_BASE_URL = `${WEBUI_BASE_URL}/rag/api/v1`;
 
+export const GSHEETS_API_BASE_URL = dev
+	? `${WEBUI_BASE_URL}/gsheets`
+	: `http://${location.hostname}:8080/gsheets`;
+
 export const WEBUI_VERSION = APP_VERSION;
 export const REQUIRED_OLLAMA_VERSION = '0.1.16';
 

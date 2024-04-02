@@ -24,13 +24,13 @@ from apps.audio.main import app as audio_app
 from apps.images.main import app as images_app
 from apps.rag.main import app as rag_app   # commented some code here to stop seg fault
 from apps.web.main import app as webui_app
+from custom_tools.gsheets import router as gsheets_router
 
 
 from config import WEBUI_NAME, ENV, VERSION, CHANGELOG, FRONTEND_BUILD_DIR
 from constants import ERROR_MESSAGES
 
 from utils.utils import get_http_authorization_cred, get_current_user
-
 
 class SPAStaticFiles(StaticFiles):
     async def get_response(self, path: str, scope):
@@ -70,6 +70,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Include the gsheets router
+app.include_router(gsheets_router, prefix="/gsheets")
 
 @app.on_event("startup")
 async def on_startup():

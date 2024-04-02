@@ -299,3 +299,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+exp/langchainollama.ipynb
+exp/token.pickle
+exp/credentials.json
+exp/credentials-mobile.json
+backend/custom_tools/credentials.json
+backend/token.pickle
+backend/custom_tools/token.pickle

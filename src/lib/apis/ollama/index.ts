@@ -1,4 +1,4 @@
-import { OLLAMA_API_BASE_URL } from '$lib/constants';
+import { OLLAMA_API_BASE_URL, GSHEETS_API_BASE_URL } from '$lib/constants';
 
 export const getOllamaUrls = async (token: string = '') => {
 	let error = null;
@@ -256,6 +256,31 @@ export const generateChatCompletion = async (token: string = '', body: object) =
 		headers: {
 			Accept: 'application/json',
 			'Content-Type': 'application/json',
+			Authorization: `Bearer ${token}`
+		},
+		body: JSON.stringify(body)
+	}).catch((err) => {
+		error = err;
+		return null;
+	});
+
+	if (error) {
+		throw error;
+	}
+
+	return [res, controller];
+};
+
+export const generateArtificialChatCompletion = async (token: string = '', body: object) => {
+	let controller = new AbortController();
+	let error = null;
+	const res = await fetch(`${GSHEETS_API_BASE_URL}/execute`, {
+		signal: controller.signal,
+		method: 'POST',
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+			// Include the token in the request header if your backend requires it
 			Authorization: `Bearer ${token}`
 		},
 		body: JSON.stringify(body)
