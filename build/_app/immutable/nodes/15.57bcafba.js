@@ -1,4 +1,4 @@
-import{s as H,e as M,i as S,C as N,d as f,w as T,o as L,f as i,l as j,a as U,g as c,h as b,m as W,c as q,N as z,j as d,r as l,u as O,n as P}from"../chunks/scheduler.67abc04a.js";import{S as R,i as J}from"../chunks/index.89481181.js";import{g as Q}from"../chunks/navigation.4562a817.js";import{c as Y,W as F}from"../chunks/index.4add80fc.js";function A(o){let a,e,t,s,r,g,u,x,m,E=`Oops! You&#39;re using an unsupported method (frontend only). Please serve the WebUI from
+import{s as H,e as M,i as S,C as N,d as f,w as T,o as L,f as i,l as j,a as U,g as c,h as b,m as W,c as q,N as z,j as d,r as l,u as O,n as P}from"../chunks/scheduler.67abc04a.js";import{S as R,i as J}from"../chunks/index.89481181.js";import{g as Q}from"../chunks/navigation.569133cb.js";import{c as Y,W as F}from"../chunks/index.4add80fc.js";function A(o){let a,e,t,s,r,g,u,x,m,E=`Oops! You&#39;re using an unsupported method (frontend only). Please serve the WebUI from
 						the backend.
 
 						<br class=""/> <br class=""/> <a class="font-semibold underline" href="https://github.com/open-webui/open-webui#how-to-install-" target="_blank">See readme.md for instructions</a>
