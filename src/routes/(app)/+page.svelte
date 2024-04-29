@@ -371,7 +371,7 @@
 		async function fetchCompletion(userPrompt, token, model, messagesBody, $settings) {
 			console.log("userPrompt: ", userPrompt);
 			if (userPrompt.includes('Google Sheets')) {
-				console.log('Google Sheets');
+				console.log('Google Sheets, running custom chat completion...');
 				// Run our custom Python script
 				return generateArtificialChatCompletion(token, { some_field: "Test" });
 			} else {
