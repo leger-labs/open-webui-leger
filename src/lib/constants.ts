@@ -1,8 +1,16 @@
-import { dev } from '$app/environment';
-// import { version } from '../../package.json';
+	import { dev } from '$app/environment';
+	// import { version } from '../../package.json';
 
 export const APP_NAME = 'LegerUI';
-export const WEBUI_BASE_URL = dev ? `http://${location.hostname}:8080` : ``;
+const isNgrok = location.hostname.includes('ngrok.io');
+const isDocker = location.hostname === 'localhost' && window.location.port === '3000';
+
+// Base URL determination
+export const WEBUI_BASE_URL = dev 
+	? `http://${location.hostname}:8080` 
+	: isDocker 
+		? `http://${location.hostname}:3000` 
+		: `https://${location.hostname}`;
 
 export const WEBUI_API_BASE_URL = `${WEBUI_BASE_URL}/api/v1`;
 
@@ -13,11 +21,7 @@ export const AUDIO_API_BASE_URL = `${WEBUI_BASE_URL}/audio/api/v1`;
 export const IMAGES_API_BASE_URL = `${WEBUI_BASE_URL}/images/api/v1`;
 export const RAG_API_BASE_URL = `${WEBUI_BASE_URL}/rag/api/v1`;
 
-export const GSHEETS_API_BASE_URL = dev
-	? `${WEBUI_BASE_URL}/gsheets`
-	: `https://${location.hostname}/gsheets`;
-
-// export const GSHEETS_API_BASE_URL = `${WEBUI_BASE_URL}/gsheets`;
+export const GSHEETS_API_BASE_URL = `${WEBUI_BASE_URL}/gsheets`
 
 export const WEBUI_VERSION = APP_VERSION;
 export const REQUIRED_OLLAMA_VERSION = '0.1.16';
